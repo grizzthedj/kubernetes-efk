@@ -14,7 +14,7 @@ docker push <YOUR_FLUENTD_IMAGE>
 
 3. Update the Fluentd image path in `fluentd/fluentd.yml`
 
-4. Run `./deploy.sh` to deploy the EFK stack. 
+4. Login to your Kubernetes Master node, and run `./deploy.sh` to deploy the EFK stack. 
 
 5. Run `kubectl proxy` if not already running, and port forward `5061` to localhost.
 
