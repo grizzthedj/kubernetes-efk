@@ -21,10 +21,16 @@ spec:
           capabilities:
             add:
               - IPC_LOCK
-        image: docker.elastic.co/elasticsearch/elasticsearch:6.2.2
+        image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.3
         env:
         - name: KUBERNETES_CA_CERTIFICATE_FILE
           value: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        - name: XPACK_SECURITY_ENABLED
+          value: "false"
+        - name: XPACK_MONITORING_ENABLED
+          value: "false"
+        - name: XPACK_GRAPH_ENABLED
+          value: "true"
         - name: NAMESPACE
           valueFrom:
             fieldRef:

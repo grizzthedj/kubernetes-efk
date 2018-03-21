@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: kibana-logging
-        image: docker.elastic.co/kibana/kibana:6.2.2
+        image: docker.elastic.co/kibana/kibana-oss:6.2.3
         resources:
           limits:
             cpu: 1000m
@@ -30,6 +30,8 @@ spec:
             value: http://elasticsearch:9200
           - name: SERVER_BASEPATH
             value: /api/v1/namespaces/efk/services/kibana-logging/proxy
+          - name: xpack.security.enabled
+            value: "false"
         ports:
         - containerPort: 5601
           protocol: TCP
