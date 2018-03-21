@@ -1,7 +1,7 @@
 
 # kubernetes-efk
 
-This repository contains the necessary configs to manually deploy an EFK stack(v6.2.2) on Kubernetes. In the current state, Fluentd is deployed as a DaemonSet and will send all logs in `/var/log/containers` to ElasticSearch. 
+This repository contains the necessary configs to manually deploy a trial version of an EFK stack(v6.2.2) on Kubernetes. In the current state, Fluentd is deployed as a DaemonSet and will send all logs in `/var/log/containers` to ElasticSearch. 
 
 1. Update the Fluentd config at `fluentd/conf/containers.conf` if you want to change which containers to collect logs for. Not doing anything here will collect logs for `all` containers running in k8s.  
 
