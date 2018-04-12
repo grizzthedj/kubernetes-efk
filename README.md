@@ -14,9 +14,9 @@ In the current state, Fluentd is deployed as a DaemonSet, and will send all logs
 
 Elasticsearch is deployed as 3 separate Deployments(1 replica each):
 
- 1. Master 
- 2. Client
- 3. Data
+ 1. Master: Cluster management
+ 2. Client: Client API's
+ 3. Data: Storing and indexing of data
 
 ## Installation
 
